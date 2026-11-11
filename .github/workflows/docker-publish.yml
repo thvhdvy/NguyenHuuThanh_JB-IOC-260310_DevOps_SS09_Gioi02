@@ -65,8 +65,7 @@ jobs:
 
       - name: Build and Push Docker Image
         run: |
-          # Thay thế 'your-docker-username' và 'microservice-app' bằng thông tin Docker Hub thực tế của bạn
-          IMAGE_NAME="${{ secrets.DOCKER_USERNAME }}/microservice-app:latest"
+          IMAGE_NAME="${{ secrets.DOCKER_USERNAME }}/user-service:latest"
           
           echo "Building Docker image..."
           docker build -t $IMAGE_NAME .
